@@ -8,6 +8,7 @@ import { Error } from './Components/error/error';
 import { Services } from './Components/services/services';
 import { AboutMe } from './Components/about-me/about-me';
 import { OurWork } from './Components/our-work/our-work';
+import { Projects } from './Components/projects/projects';
 
 export const routes: Routes = [
 { path: "", redirectTo: "home", pathMatch: "full" },
@@ -15,6 +16,7 @@ export const routes: Routes = [
   {path:"navbar",component:Navbar},
     {path:"services",component:Services},
   {path:"about-me",component:AboutMe},
+   {path:"projects",component:Projects},
     {path:"contact-us",component:ContactUs},
   {path:"our-work",component:OurWork},
   {path:"footer",component:Footer},
