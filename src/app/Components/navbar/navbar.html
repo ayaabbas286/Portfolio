@@ -1,1 +1,39 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg custom-navbar w-75">
+  <div id="nav-custom-phone" class="brand">
+    <a class="navbar-brand text-white px-4 py-2" href="#">
+      <i class="devicon-angular-plain"></i>
+    </a>
+  </div>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navbarNav" class="collapse navbar-collapse">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/about-me">About Me</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/services">Services</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/our-work">Our Work</a>
+      </li>
+    </ul>
+
+    <a routerLink="/contact-us" class="btn custom-contact-btn text-white ms-lg-3 mt-2 mt-lg-0">
+      Contact Us
+    </a>
+  </div>
+</nav>
