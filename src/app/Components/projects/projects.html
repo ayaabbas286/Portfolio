@@ -1,1 +1,22 @@
-<p>projects works!</p>
+<div class="project-row">
+  <div class="heading text-center">
+    <h1>My Projects</h1>
+    <p>
+      Discover the front-end experiences I’ve crafted, combining clean code, responsive layouts, and
+      smooth interactions to bring modern interfaces to life.
+    </p>
+  </div>
+  <div class="row project-Cards">
+    @for (p of projects; track p.id) {
+    <div class="col-lg-3">
+      <div class="card">
+        <p>{{ p.title }}</p>
+        <p>
+          {{ p.shortDescription }}
+        </p>
+        <a class="btn btn-info" routerLink="/projects/{{ p.id }}">Click ME</a>
+      </div>
+    </div>
+    }
+  </div>
+</div>

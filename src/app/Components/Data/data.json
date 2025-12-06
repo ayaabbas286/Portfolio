@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Personal Portfolio",
+      "shortDescription": "Single-page portfolio built with Angular to showcase my front-end work.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "SCSS"],
+      "liveUrl": "https://your-domain.com",
+      "githubUrl": "https://github.com/your-username/portfolio"
+    },
+    {
+      "id": 2,
+      "title": "Weather App",
+      "shortDescription": "Responsive weather dashboard that consumes a public API.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "REST API"],
+      "liveUrl": "https://your-domain.com/weather",
+      "githubUrl": "https://github.com/your-username/weather-app"
+    },
+    {
+      "id": 3,
+      "title": "Task Manager",
+      "shortDescription": "Kanban-style task manager with drag-and-drop interaction.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
+      "liveUrl": "https://your-domain.com/tasks",
+      "githubUrl": "https://github.com/your-username/task-manager"
+    }
+  ]
+}

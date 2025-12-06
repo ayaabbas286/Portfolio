@@ -9,6 +9,7 @@ import { Services } from './Components/services/services';
 import { AboutMe } from './Components/about-me/about-me';
 import { OurWork } from './Components/our-work/our-work';
 import { Projects } from './Components/projects/projects';
+import { ProjectsDetails } from './Components/projects-details/projects-details';
 
 export const routes: Routes = [
 { path: "", redirectTo: "home", pathMatch: "full" },
@@ -19,6 +20,7 @@ export const routes: Routes = [
    {path:"projects",component:Projects},
     {path:"contact-us",component:ContactUs},
   {path:"our-work",component:OurWork},
+    {path:"projects/:id",component:ProjectsDetails},
   {path:"footer",component:Footer},
   {path:"**",component:Error}
 ];

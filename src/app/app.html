@@ -1,3 +1,14 @@
 <app-navbar></app-navbar>
+<div class="side-Arrows">
+  <!-- bottom: hide when at end of page -->
+  <div *ngIf="showBottomButton" (click)="scrollDown()" class="arrow-To-bottom rounded-border">
+    <i class="fa-solid fa-angle-down"></i>
+  </div>
+
+  <!-- top: appears after some scroll -->
+  <div *ngIf="showTopButton" (click)="scrollUp()" class="arrow-To-top rounded-border">
+    <i class="fa-solid fa-angle-up"></i>
+  </div>
+</div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

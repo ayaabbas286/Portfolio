@@ -1,3 +1,19 @@
 body {
-  background: linear-gradient(90deg, #12070f 60%, #5b1834 100%);
+  background: linear-gradient(90deg, var(--color-primary) 60%, var(--color-primary-sec) 100%);
+}
+:root {
+  --color-primary: #12070f;
+  --color-primary-sec: rgb(54, 20, 33);
+  --mainColor: #da3b68;
+}
+.rounded-border {
+  border-radius: 50%;
+}
+/* glow line  */
+.glow-line {
+  /* border: 1px solid white; */
+  width: 90%;
+  height: 2px; /* main line thickness */
+  margin: 40px auto;
+  background: linear-gradient(to right, transparent, #cd2f73, #a64e6d, #cd2f73, transparent);
 }

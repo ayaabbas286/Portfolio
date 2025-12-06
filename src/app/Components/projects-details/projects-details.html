@@ -1,0 +1,12 @@
+<div class="projectDetails">
+  <div class="container">
+    @if (projects()) {
+    <p>{{ projects().title }}</p>
+    <p>{{ projects().shortDescription }}</p>
+    <p>{{ projects().liveUrl }}</p>
+    <p>{{ projects().githubUrl }}</p>
+    } @else {
+    <p>Loading ...</p>
+    }
+  </div>
+</div>

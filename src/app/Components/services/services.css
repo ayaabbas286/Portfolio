@@ -1,0 +1,59 @@
+.container {
+  /* padding: 10px; */
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.heading h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+.heading p {
+  color: rgb(165, 165, 165);
+  font-size: 1.1rem;
+}
+
+.services-card .card {
+  background-color: transparent;
+  border: 1px solid #e5688b;
+  height: 19rem;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 1px 2px 3px #e5688b;
+}
+.services-card .card h1 {
+  margin: 15px;
+}
+
+.services-card .card h5 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 15px;
+  color: var(--mainColor);
+}
+
+.services-card .card p {
+  text-align: center;
+}
+.services-card .card:hover {
+  box-shadow: none;
+  border: 1px solid #120c0d;
+  cursor: pointer;
+  background: linear-gradient(var(--color-primary), #c3315a);
+}
+@media screen and (max-width: 767px) {
+  .services-card .card {
+    height: 15.5rem;
+    width: 70%;
+    margin: 10px auto;
+  }
+  .heading p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .services-card .card {
+    width: 70%;
+    margin: 10px auto;
+    height: 15rem;
+  }
+}
