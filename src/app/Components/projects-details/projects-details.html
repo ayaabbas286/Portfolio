@@ -1,12 +1,20 @@
-<div class="projectDetails">
-  <div class="container">
-    @if (projects()) {
-    <p>{{ projects().title }}</p>
-    <p>{{ projects().shortDescription }}</p>
-    <p>{{ projects().liveUrl }}</p>
-    <p>{{ projects().githubUrl }}</p>
-    } @else {
-    <p>Loading ...</p>
+@if (project()) {
+<div class="projectDetails-row">
+  <h1>{{ project()?.title }}</h1>
+  <p>{{ project()?.shortDescription }}</p>
+
+  <p><strong>Role:</strong> {{ project()?.role }}</p>
+
+  <p>
+    <strong>Tech stack:</strong>
+    @for (t of project()?.techStack ?? []; track t) {
+    <span class="badge bg-info me-2">{{ t }}</span>
     }
-  </div>
+  </p>
+
+  <a class="btn btn-primary me-2" [href]="project()?.liveUrl" target="_blank">View Live</a>
+  <a class="btn btn-outline-dark" [href]="project()?.githubUrl" target="_blank">View Code</a>
 </div>
+} @else {
+<p>Loading project details...</p>
+}

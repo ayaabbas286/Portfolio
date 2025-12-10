@@ -26,6 +26,15 @@
       "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
       "liveUrl": "https://your-domain.com/tasks",
       "githubUrl": "https://github.com/your-username/task-manager"
+    },
+    {
+      "id": 4,
+      "title": "Fasco",
+      "shortDescription": "Kanban-style task manager with drag-and-drop interaction.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
+      "liveUrl": "https://your-domain.com/tasks",
+      "githubUrl": "https://github.com/your-username/task-manager"
     }
   ]
 }

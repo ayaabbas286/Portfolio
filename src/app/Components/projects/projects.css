@@ -5,3 +5,11 @@
 .heading p {
   color: rgb(165, 165, 165);
 }
+.project-Cards .card {
+  background-color: transparent;
+  border: 1px solid #e5688b;
+  height: 19rem;
+  border-radius: 20px;
+  color: white;
+  box-shadow: 1px 2px 3px #e5688b;
+}

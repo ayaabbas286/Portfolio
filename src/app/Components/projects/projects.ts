@@ -1,25 +1,29 @@
 import {  HttpClientModule } from '@angular/common/http';
 import { ProjectsService } from './../../Services/projects-service';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterLink, RouterModule } from "@angular/router";
+import { IProjects } from '../../iprojects';
+import { map } from 'rxjs';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-projects',
+  standalone: true,
   imports: [HttpClientModule, RouterLink,RouterModule],
   providers:[ProjectsService],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
-export class Projects implements OnInit{
-  projects:any;
-constructor(public Pro_Service : ProjectsService){
+export class Projects{
+// نحقن السيرفيس
+  private proService = inject(ProjectsService);
 
-}
-  ngOnInit(): void {
-    this.Pro_Service.GetAll().subscribe(
-(data)=>{this.projects = data},
-(err)=>{ console.log(err);}
+  // Observable من السيرفيس
+ private projects$ = this.proService.GetAll().pipe(
+  map((res) => (res ?? []) as IProjects[])   // هنا الـ cast المهم
+);
+  // تحويل الـ Observable لـ signal
 
-    );
-  }
+_projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
+
 }
