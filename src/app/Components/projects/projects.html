@@ -7,15 +7,34 @@
     </p>
   </div>
 
-  <div class="row project-Cards">
+  <div class="row project-Cards container">
     @for (p of _projects(); track p.id) {
-    <div class="col-lg-3">
-      <div class="card">
-        <p>{{ p.title }}</p>
-        <p>{{ p.shortDescription }}</p>
-        <a class="btn btn-info" [routerLink]="['/projects', p.id]">Click ME</a>
+    <div class="col-lg-4">
+      <div class="card-container">
+        <div class="card mt-5">
+          <div class="front">
+            <div class="card-img-container">
+              <img [src]="p.ProImage" class="card-img-top" alt="Project Image" />
+            </div>
+            <div class="card-body">
+              <h4>{{ p.title }}</h4>
+              <!-- <p>{{ p.shortDescription }}</p> -->
+            </div>
+            <!-- <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]">Show Details</a> -->
+          </div>
+          <div class="back">
+            <div class="card-body">
+              <h4>{{ p.title }}</h4>
+              <p>{{ p.shortDescription }}</p>
+              <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]">Show Details</a>
+              <a class="btn LiveUrl" [routerLink]="['/projects', p.id]">Go Live</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     }
   </div>
 </div>
+
+<div class="glow-line"></div>

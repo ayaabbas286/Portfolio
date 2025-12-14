@@ -22,8 +22,8 @@ export class Projects{
  private projects$ = this.proService.GetAll().pipe(
   map((res) => (res ?? []) as IProjects[])   // هنا الـ cast المهم
 );
-  // تحويل الـ Observable لـ signal
 
 _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
 
-}
+  // تحويل الـ Observable لـ signal
+;}
