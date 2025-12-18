@@ -18,7 +18,7 @@
 }
 .project-Cards .card {
   position: relative;
-  height: 30rem;
+  height: 25rem;
   border-radius: 20px;
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
@@ -39,7 +39,10 @@
 
 .card .front {
   z-index: 2;
-  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
 }
 .card .back {
   z-index: 1;
@@ -56,25 +59,25 @@
 .card-img-container {
   position: relative;
   width: 95%;
-  margin: 10px auto;
-  height: 400px;
+  height: 314px;
   overflow: hidden;
   border-radius: 20px;
 }
 .card-img-container img {
-  position: absolute;
-  height: 95%;
-  width: 95%;
-  border-radius: 20px;
-  transform: translate(10px, 10px);
+  height: 100%;
+  width: 100%;
+
   object-fit: cover;
 }
 
 .front .card-body {
   padding: 10px 20px;
   text-align: center;
+  margin-top: 10px;
 }
-
+.back .card-body {
+  font-size: 18px;
+}
 .DetailsBtn,
 .LiveUrl {
   /* position: absolute; */
@@ -98,4 +101,96 @@
   text-decoration: none;
   color: #ff4d6d;
   transform: translatey(-2px);
+}
+.LoadMoreBtn,
+.SeeLessBtn {
+  border: 1px solid #ffffff;
+  padding: 10px 40px;
+  border-radius: 20px;
+  color: #ffffff;
+  margin-top: 40px;
+  font-weight: 500;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+.LoadMoreBtn:hover,
+.SeeLessBtn:hover {
+  color: var(--mainColor);
+  border: 1px solid var(--mainColor);
+}
+.SeeLessBtn:hover,
+.LoadMoreBtn:hover {
+  transform: translateY(-2px);
+}
+.fa-angle-up,
+.fa-angle-down {
+  transform: translateY(2px);
+}
+.front-cardDetails {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .front-cardDetails {
+    display: block;
+  }
+  .project-Cards .card {
+    height: 22rem;
+    width: 100%;
+    margin: 20px auto;
+    transform: none;
+    transform-style: flat;
+  }
+  .card .front .card-img-container {
+    height: 250px;
+  }
+  .card .front .card-body p {
+    display: none;
+  }
+  .card .front .card-body {
+    height: 110px;
+  }
+  .card .back {
+    display: none;
+    transform: none;
+  }
+  .card-container {
+    perspective: none;
+  }
+  .card-container:hover .card {
+    transform: none;
+  }
+  .DetailsBtn {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .front-cardDetails {
+    display: block;
+  }
+  .project-Cards .card {
+    height: 22rem;
+    width: 100%;
+    margin: 20px auto;
+    transform: none;
+    transform-style: flat;
+  }
+  .card .front .card-body p {
+    display: none;
+  }
+  .card .front .card-body {
+    height: 110px;
+  }
+  .card .back {
+    display: none;
+    transform: none;
+  }
+  .card-container {
+    perspective: none;
+  }
+  .card-container:hover .card {
+    transform: none;
+  }
+  .DetailsBtn {
+    margin-top: 10px;
+  }
 }

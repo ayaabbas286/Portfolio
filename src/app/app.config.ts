@@ -10,4 +10,6 @@ export const appConfig: ApplicationConfig = {
 anchorScrolling:'enabled', scrollPositionRestoration:'disabled'
     }),withViewTransitions())
   ]
+
 };
+

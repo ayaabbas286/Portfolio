@@ -7,5 +7,8 @@ export interface IProjects {
   techStack: string[];
   liveUrl: string;
   githubUrl: string;
+  images: string[];
+  detailedDescription: string;
+  technologies: string[];
 }
 

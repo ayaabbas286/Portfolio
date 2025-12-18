@@ -1,9 +1,21 @@
 .custom-navbar {
   background: linear-gradient(90deg, #12070f 55%, #631a34 100%);
   border-radius: 32px;
-  margin: 30px auto;
   padding: 12px 32px;
-  box-shadow: 0px 0px 1px 1px #76576182;
+  margin: 10px auto;
+  box-shadow: 0px 0px 0px 1px #ce517b65;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 16%);
+}
+
+.container-nav {
+  height: 100px;
+}
+.navbar {
+  transition: all 0.5s ease-in-out;
 }
 
 .nav-link {
@@ -19,10 +31,7 @@
   border-radius: 20px;
   border: 1px solid #4a0b3a;
   outline: none;
-  /* background-image: url('/Images/video-from-rawpixel-id-17027723-gif.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
+  box-shadow: 0 0 7px 0px #790324b8;
 }
 
 .nav-link:hover {
@@ -47,6 +56,10 @@
   border-radius: 20px;
   padding: 9px 40px;
   border: 2px solid #ba7d7d3d;
+}
+.navbar-brand img {
+  width: 47px;
+  height: 47px;
 }
 
 .brand .navbar-brand {

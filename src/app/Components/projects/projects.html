@@ -8,32 +8,58 @@
   </div>
 
   <div class="row project-Cards container">
-    @for (p of _projects(); track p.id) {
-    <div class="col-lg-4">
+    @for (p of visibleCards(); track p.id) {
+    <div class="col-lg-4 col-md-6 col-sm-12">
       <div class="card-container">
         <div class="card mt-5">
           <div class="front">
             <div class="card-img-container">
               <img [src]="p.ProImage" class="card-img-top" alt="Project Image" />
             </div>
+
             <div class="card-body">
               <h4>{{ p.title }}</h4>
-              <!-- <p>{{ p.shortDescription }}</p> -->
+              <div class="front-cardDetails">
+                <p>{{ p.shortDescription }}</p>
+                <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]">Show Details</a>
+                <!-- <a class="btn LiveUrl" [routerLink]="['/projects', p.id]">Go Live</a> -->
+              </div>
             </div>
-            <!-- <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]">Show Details</a> -->
           </div>
           <div class="back">
             <div class="card-body">
-              <h4>{{ p.title }}</h4>
+              <h3>{{ p.title }}</h3>
               <p>{{ p.shortDescription }}</p>
-              <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]">Show Details</a>
-              <a class="btn LiveUrl" [routerLink]="['/projects', p.id]">Go Live</a>
+              <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]"
+                >Show Details <i class="fa-solid fa-angle-right"></i
+              ></a>
+              <a class="btn LiveUrl" [routerLink]="['/projects', p.id]"
+                >Go Live <i class="fa-solid fa-globe"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
     </div>
     }
+  </div>
+  <div class="d-flex justify-content-center align-items-center">
+    <button
+      class="btn LoadMoreBtn"
+      (click)="LoadMore()"
+      *ngIf="visibleCards().length < _projects().length"
+    >
+      See More <span><i class="fa-solid fa-angle-down"></i></span>
+    </button>
+  </div>
+  <div class="d-flex justify-content-center align-items-center">
+    <button
+      class="btn SeeLessBtn"
+      (click)="SeeLess()"
+      *ngIf="visibleCards().length >= _projects().length && _projects().length > 6"
+    >
+      See Less <span><i class="fa-solid fa-angle-up"></i></span>
+    </button>
   </div>
 </div>
 

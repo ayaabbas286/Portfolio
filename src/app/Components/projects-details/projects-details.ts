@@ -1,6 +1,5 @@
-import { Projects } from './../projects/projects';
 import { HttpClientModule } from '@angular/common/http';
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, effect, ElementRef, inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ProjectsService } from '../../Services/projects-service';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -12,12 +11,13 @@ import { toSignal } from '@angular/core/rxjs-interop';
   selector: 'app-projects-details',
   standalone: true,
   imports: [HttpClientModule,CommonModule],
+   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 providers:[ProjectsService],
   templateUrl: './projects-details.html',
   styleUrl: './projects-details.css',
 
 })
-export class ProjectsDetails{
+export class ProjectsDetails {
 private route = inject(ActivatedRoute);
   private proService = inject(ProjectsService);
 
@@ -27,5 +27,55 @@ private route = inject(ActivatedRoute);
   );
 
   project = toSignal<IProjects | null>(this.project$, { initialValue: null });
+
+
+@ViewChild('mainSwiper') mainSwiper!: ElementRef<any>;
+@ViewChild('thumbSwiper') thumbSwiper!: ElementRef<any>;
+
+
+  private swiperInitialized = false;
+
+constructor() {
+  effect(() => {
+    const p = this.project();
+    if (!p) return;
+
+    queueMicrotask(() => this.initOrUpdateSwiper());
+
+  });
+}
+
+private initOrUpdateSwiper() {
+  const mainEl = this.mainSwiper?.nativeElement;
+  const thumbEl = this.thumbSwiper?.nativeElement;
+  if (!mainEl || !thumbEl) return;
+
+  Object.assign(thumbEl, {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    slideToClickedSlide: true,
+
+  });
+
+  Object.assign(mainEl, {
+    spaceBetween: 10,
+    navigation: true,
+    loop: true,
+    thumbs: { swiper: thumbEl },
+  });
+
+  if (!this.swiperInitialized) {
+    thumbEl.initialize();
+    mainEl.initialize();
+    this.swiperInitialized = true;
+    return;
+  }
+
+  thumbEl.swiper?.update();
+  mainEl.swiper?.update();
+}
+
 }
 
