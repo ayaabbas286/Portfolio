@@ -46,12 +46,16 @@
         <h5 class="mt-4">Technologies Used:</h5>
         <ul class="list-inline">
           @for (tech of project()?.technologies; track $index) {
-          <li class="list-inline-item badge bg-secondary m-1 p-2">{{ tech }}</li>
+          <li class="list-inline-item">{{ tech }}</li>
           }
         </ul>
         <div class="text-center mt-4 my-3">
-          <a class="btn btn-primary" [href]="project()?.githubUrl" target="_blank">Github Code</a>
-          <a class="btn btn-primary" [href]="project()?.liveUrl" target="_blank">View Live</a>
+          <a class="btn GithubBtn" [href]="project()?.githubUrl" target="_blank"
+            >Github Code <i class="fa-brands fa-github"></i
+          ></a>
+          <a class="btn LiveUrlBtn" [href]="project()?.liveUrl" target="_blank"
+            >View Live <i class="fa-solid fa-globe"></i
+          ></a>
         </div>
       </div>
     </div>
