@@ -6,7 +6,7 @@ import { IProjects } from '../iprojects';
   providedIn: 'root',
 })
 export class ProjectsService {
-  DB_URL = "http://localhost:3000/projects";
+  DB_URL = "https://ayaabbas286.github.io/Portfolio/Data/data.json";
   constructor(public MyHttp :HttpClient){}
   GetAll(){
   return this.MyHttp.get<IProjects[]>( this.DB_URL)
