@@ -21,13 +21,9 @@ export class Projects{
 
   // Observable من السيرفيس
  private projects$ = this.proService.GetAll().pipe(
-    map((res) => (res ?? []) as IProjects[])   // هنا الـ cast المهم
+    map((res:any) => res.projects as IProjects[])   // هنا الـ cast المهم
 );
 
-debugProjects$ = this.projects$.subscribe({
-  next: (data) => console.log('DATA FROM JSON:', data),
-  error: (err) => console.error('ERROR FROM JSON:', err)
-});
 
 _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
 cardInitialCount = signal(6);
