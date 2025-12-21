@@ -28,27 +28,23 @@ export class Projects{
 _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
 
 cardInitialCount = signal(6);
-visibleCards = computed(()=> {
-  const list = this._projects();
-  console.log(list);
-  return Array.isArray(list) ? list.slice(0, this.cardInitialCount()) : [];
-})
+visibleCards = computed(() => {
+  const list = this._projects() ?? [];   // fallback
+  const count = this.cardInitialCount();
+  if (!Array.isArray(list)) return [];
+  return list.slice(0, Math.min(count, list.length));
+});
 
 
-  hasMore = computed(() => {
-    const list = this._projects();
-    return Array.isArray(list) && this.visibleCards().length < list.length;
-  });
 
-  canSeeLess = computed(() => {
-    const list = this._projects();
-    return (
-      Array.isArray(list) &&
-      list.length > 6 &&
-      this.visibleCards().length >= list.length
+hasMore = computed(() => this.visibleCards().length > 0 &&
+                         this.visibleCards().length < (this._projects()?.length ?? 0));
 
-    );
-  });
+canSeeLess = computed(() =>
+  this.visibleCards().length >= (this._projects()?.length ?? 0) &&
+  (this._projects()?.length ?? 0) > 6
+);
+
 LoadMore(){
   this.cardInitialCount.set(this.cardInitialCount() + 6);
 }
