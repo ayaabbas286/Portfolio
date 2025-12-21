@@ -7,7 +7,7 @@ import { map } from 'rxjs';
   providedIn: 'root',
 })
 export class ProjectsService {
-  DB_URL = "https://ayaabbas286.github.io/browser/Data/data.json";
+  DB_URL = "https://ayaabbas286.github.io/Portfolio/browser/Data/data.json";
   constructor(public MyHttp :HttpClient){}
   GetAll(){
   return this.MyHttp.get<{projects:IProjects[]}>( this.DB_URL).pipe(
