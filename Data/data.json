@@ -1,0 +1,296 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Personal Portfolio",
+      "ProImage": "Projects/1.webp",
+      "shortDescription": "Single-page portfolio built with Angular to showcase my front-end work.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "SCSS"],
+      "liveUrl": "https://your-domain.com",
+      "githubUrl": "https://github.com/your-username/portfolio",
+      "images": [
+        "/Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/2.webp",
+        "Projects/3.webp",
+        "Projects/4.webp",
+        "Projects/1.webp",
+        "Projects/3.webp",
+        "Projects/1.webp"
+      ]
+      ,  "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"
+      ],
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    },
+    {
+      "id": 2,
+      "title": "Weather App",
+      "ProImage": "Projects/2.webp",
+      "shortDescription": "Responsive weather dashboard that consumes a public API.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "REST API"],
+      "liveUrl": "https://your-domain.com/weather",
+      "githubUrl": "https://github.com/your-username/weather-app",
+           "images": [
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp"
+      ] ,
+        "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"]
+       ,
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    },
+    {
+      "id": 3,
+      "title": "Task Manager",
+      "ProImage": "Projects/3.webp",
+      "shortDescription": "Kanban-style task manager with drag-and-drop interaction.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
+      "liveUrl": "https://your-domain.com/tasks",
+      "githubUrl": "https://github.com/your-username/task-manager",
+         "images": [
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp"
+      ] , "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"
+      ],
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    },
+    {
+      "id": 4,
+      "title": "Fasco",
+      "ProImage": "Projects/4.webp",
+      "shortDescription": "Kanban-style task manager with drag-and-drop interaction.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "HTML", "CSS"],
+      "liveUrl": "https://your-domain.com/tasks",
+      "githubUrl": "https://github.com/your-username/task-manager",
+           "images": [
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp"
+      ] ,  "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"
+      ],
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    },
+     {
+      "id": 5,
+      "title": "Weather App",
+      "ProImage": "Projects/2.webp",
+      "shortDescription": "Responsive weather dashboard that consumes a public API.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "REST API"],
+      "liveUrl": "https://your-domain.com/weather",
+      "githubUrl": "https://github.com/your-username/weather-app",
+           "images": [
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp"
+      ] ,  "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"
+      ],
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    }, {
+      "id": 6,
+      "title": "Weather App",
+      "ProImage": "Projects/2.webp",
+      "shortDescription": "Responsive weather dashboard that consumes a public API.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "REST API"],
+      "liveUrl": "https://your-domain.com/weather",
+      "githubUrl": "https://github.com/your-username/weather-app",
+           "images": [
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp"
+      ] ,  "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"
+      ],
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    },
+     {
+      "id": 7,
+      "title": "Weather App",
+      "ProImage": "Projects/2.webp",
+      "shortDescription": "Responsive weather dashboard that consumes a public API.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "REST API"],
+      "liveUrl": "https://your-domain.com/weather",
+      "githubUrl": "https://github.com/your-username/weather-app",
+           "images": [
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp"
+      ] ,  "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"
+      ],
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    }, {
+      "id": 8,
+      "title": "Weather App",
+      "ProImage": "Projects/2.webp",
+      "shortDescription": "Responsive weather dashboard that consumes a public API.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "REST API"],
+      "liveUrl": "https://your-domain.com/weather",
+      "githubUrl": "https://github.com/your-username/weather-app",
+           "images": [
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp"
+      ] ,  "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"
+      ],
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    },
+     {
+      "id": 9,
+      "title": "Weather App",
+      "ProImage": "Projects/2.webp",
+      "shortDescription": "Responsive weather dashboard that consumes a public API.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "REST API"],
+      "liveUrl": "https://your-domain.com/weather",
+      "githubUrl": "https://github.com/your-username/weather-app",
+       "images": [
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp"
+      ] ,
+        "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"
+      ],
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    }, {
+      "id": 10,
+      "title": "Weather App",
+      "ProImage": "Projects/2.webp",
+      "shortDescription": "Responsive weather dashboard that consumes a public API.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "REST API"],
+      "liveUrl": "https://your-domain.com/weather",
+      "githubUrl": "https://github.com/your-username/weather-app",
+           "images": [
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp"
+      ] ,  "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"
+      ],
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    },
+     {
+      "id": 11,
+      "title": "Weather App",
+      "ProImage": "Projects/2.webp",
+      "shortDescription": "Responsive weather dashboard that consumes a public API.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "REST API"],
+      "liveUrl": "https://your-domain.com/weather",
+      "githubUrl": "https://github.com/your-username/weather-app",
+           "images": [
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp"
+      ] ,  "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"
+      ],
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    }, {
+      "id": 12,
+      "title": "Weather App",
+      "ProImage": "Projects/2.webp",
+      "shortDescription": "Responsive weather dashboard that consumes a public API.",
+      "role": "Front-end Developer",
+      "techStack": ["Angular", "TypeScript", "REST API"],
+      "liveUrl": "https://your-domain.com/weather",
+      "githubUrl": "https://github.com/your-username/weather-app",
+      "images": [
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp",
+        "Projects/1.webp"
+      ] ,
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "HTML5",
+        "CSS3",
+        "REST API"
+      ],
+      "detailedDescription": "This is a detailed description of the Personal Portfolio project. It includes information about the features, challenges faced during development, and the overall experience of building the portfolio using Angular."
+    }
+  ]
+}
