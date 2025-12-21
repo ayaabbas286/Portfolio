@@ -25,26 +25,25 @@ export class Projects{
 
     // هنا الـ cast المهم
 );
-
-
 _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
 
+SafeProjects = computed(() => this._projects() ?? []);
+
 cardInitialCount = signal(6);
+
 visibleCards = computed(() => {
-  const list = this._projects() ?? [];   // fallback
+  const list = this.SafeProjects();
   const count = this.cardInitialCount();
-  if (!Array.isArray(list)) return [];
   return list.slice(0, Math.min(count, list.length));
 });
 
 
-
 hasMore = computed(() => this.visibleCards().length > 0 &&
-                         this.visibleCards().length < (this._projects()?.length ?? 0));
+                         this.visibleCards().length < (this.SafeProjects().length));
 
 canSeeLess = computed(() =>
-  this.visibleCards().length >= (this._projects()?.length ?? 0) &&
-  (this._projects()?.length ?? 0) > 6
+  this.visibleCards().length >= this.SafeProjects().length &&
+  this.SafeProjects().length > 6
 );
 
 LoadMore(){
