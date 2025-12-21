@@ -21,10 +21,11 @@ export class Projects{
 
   // Observable من السيرفيس
  private projects$ = this.proService.GetAll().pipe(
-    map((res:any) => res.projects as IProjects[] )
+    map((res:any) =>  res as IProjects[])
 
-    // هنا الـ cast المهم
 );
+
+
 _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
 
 SafeProjects = computed(() => this._projects() ?? []);
