@@ -10,7 +10,9 @@ export class ProjectsService {
   DB_URL = "https://ayaabbas286.github.io/Portfolio/Data/data.json";
   constructor(public MyHttp :HttpClient){}
   GetAll(){
-  return this.MyHttp.get<IProjects[]>( this.DB_URL)
+  return this.MyHttp.get<{projects:IProjects[]}>( this.DB_URL).pipe(
+    map(res => res.projects)
+  )
   }
 GetUserById(id: number) {
   return this.GetAll().pipe(
