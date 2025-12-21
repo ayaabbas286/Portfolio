@@ -21,7 +21,9 @@ export class Projects{
 
   // Observable من السيرفيس
  private projects$ = this.proService.GetAll().pipe(
-    map((res:any) => res.projects as IProjects[])   // هنا الـ cast المهم
+    map((res:any) => res.projects as IProjects[] )
+
+    // هنا الـ cast المهم
 );
 
 
@@ -51,5 +53,10 @@ LoadMore(){
 SeeLess(){
   this.cardInitialCount.set(6);
 }
+get debugProjects(): IProjects[] {
+  console.log('projects = ', this._projects());
+  return this._projects();
+}
+
 }
 ;

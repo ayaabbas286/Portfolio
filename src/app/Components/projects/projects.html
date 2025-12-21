@@ -55,3 +55,6 @@
 </div>
 
 <div class="glow-line"></div>
+@for (p of debugProjects; track p.id) {
+<p>{{ p.title }}</p>
+}
