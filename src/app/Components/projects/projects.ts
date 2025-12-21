@@ -24,6 +24,11 @@ export class Projects{
     map((res) => (res ?? []) as IProjects[])   // هنا الـ cast المهم
 );
 
+debugProjects$ = this.projects$.subscribe({
+  next: (data) => console.log('DATA FROM JSON:', data),
+  error: (err) => console.error('ERROR FROM JSON:', err)
+});
+
 _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
 cardInitialCount = signal(6);
 visibleCards = computed(()=> this._projects().slice(0, this.cardInitialCount()) )
