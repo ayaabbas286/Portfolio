@@ -30,6 +30,7 @@ _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
 cardInitialCount = signal(6);
 visibleCards = computed(()=>{
   const listArray= this._projects();
+  console.log(listArray);
 return Array.isArray(listArray)?  listArray.slice(0, this.cardInitialCount()) : []} )
 LoadMore(){
   this.cardInitialCount.set(this.cardInitialCount() + 6);
