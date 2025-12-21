@@ -32,6 +32,21 @@ visibleCards = computed(()=> {
   const list = this._projects();
   return Array.isArray(list) ? list.slice(0, this.cardInitialCount()) : [];
 })
+
+
+  hasMore = computed(() => {
+    const list = this._projects();
+    return Array.isArray(list) && this.visibleCards().length < list.length;
+  });
+
+  canSeeLess = computed(() => {
+    const list = this._projects();
+    return (
+      Array.isArray(list) &&
+      list.length > 6 &&
+      this.visibleCards().length >= list.length
+    );
+  });
 LoadMore(){
   this.cardInitialCount.set(this.cardInitialCount() + 6);
 }
