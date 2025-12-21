@@ -26,8 +26,11 @@ export class Projects{
 
 
 _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
+
 cardInitialCount = signal(6);
-visibleCards = computed(()=> this._projects().slice(0, this.cardInitialCount()) )
+visibleCards = computed(()=>{
+  const listArray= this._projects();
+return Array.isArray(listArray)?  listArray.slice(0, this.cardInitialCount()) : []} )
 LoadMore(){
   this.cardInitialCount.set(this.cardInitialCount() + 6);
 }
