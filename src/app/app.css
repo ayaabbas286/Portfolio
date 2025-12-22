@@ -31,10 +31,9 @@
 }
 .arrow-To-top:hover,
 .arrow-To-bottom:hover {
-  background-image: url('/Images/video-from-rawpixel-id-17027723-gif.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: linear-gradient(#7a1d38 60%, #360c14 100%);
+  border-color: transparent;
+  box-shadow: none;
 }
 .fa-angle-down,
 .fa-angle-up {

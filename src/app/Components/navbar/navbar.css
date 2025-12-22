@@ -1,5 +1,5 @@
 .custom-navbar {
-  background: linear-gradient(90deg, #12070f 55%, #631a34 100%);
+  background: linear-gradient(90deg, #12070f 55%, #491024 100%);
   border-radius: 32px;
   padding: 12px 32px;
   margin: 10px auto;
@@ -46,7 +46,8 @@
 }
 
 .custom-contact-btn {
-  background: linear-gradient(90deg, #401224 60%, #33071d 100%);
+  /* background: linear-gradient(90deg, #a89ba0 60%, #33071d 100%); */
+  background-color: #12070f;
   background-image: url('/Images/video-from-rawpixel-id-17027723-gif.gif');
   background-size: cover;
   background-repeat: no-repeat;
@@ -90,7 +91,9 @@
   .custom-navbar .nav-item + .nav-item {
     margin-left: 40px; /* space between menu items on desktop */
   }
-
+  .navbar {
+    height: 70px;
+  }
   .custom-contact-btn {
     margin-left: 100px; /* move button right only on desktop */
   }

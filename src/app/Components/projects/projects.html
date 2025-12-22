@@ -9,7 +9,7 @@
 
   <div class="row project-Cards container">
     @for (p of visibleCards(); track p.id) {
-    <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="col-lg-3 col-md-6 col-sm-12 gx-3">
       <div class="card-container">
         <div class="card mt-5">
           <div class="front">
@@ -18,7 +18,7 @@
             </div>
 
             <div class="card-body">
-              <h4>{{ p.title }}</h4>
+              <h5>{{ p.title }}</h5>
               <div class="front-cardDetails">
                 <p>{{ p.shortDescription }}</p>
                 <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]">Show Details</a>
@@ -32,9 +32,9 @@
               <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]"
                 >Show Details <i class="fa-solid fa-angle-right"></i
               ></a>
-              <a class="btn LiveUrl" [routerLink]="['/projects', p.id]"
+              <!-- <a class="btn LiveUrl" [routerLink]="['/projects', p.id]"
                 >Go Live <i class="fa-solid fa-globe"></i
-              ></a>
+              ></a> -->
             </div>
           </div>
         </div>

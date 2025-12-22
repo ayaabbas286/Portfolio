@@ -74,12 +74,14 @@
           <div class="card">
             <div class="card-img-container">
               <img [src]="relPro.ProImage" class="card-img-top" [alt]="relPro.title" />
+              <div class="overlayBtn">
+                <a class="btn DetailsBtn mt-auto" [routerLink]="['/projects', relPro.id]"
+                  ><i class="fa-regular fa-eye"></i
+                ></a>
+              </div>
             </div>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">{{ relPro.title }}</h5>
-              <a class="btn DetailsBtn mt-auto" [routerLink]="['/projects', relPro.id]"
-                >Show Details <i class="fa-solid fa-angle-right"></i
-              ></a>
             </div>
           </div>
         </div>
