@@ -37,8 +37,8 @@
         </swiper-container>
       </div>
     </div>
-    <div class="row mt-4">
-      <div class="projectDetails-info text-center w-75 mx-auto">
+    <div class="row proDetails mt-4">
+      <div class="projectReview col-lg-6 mx-auto">
         <h1 class="display-5 fw-bold">{{ project()?.title }}</h1>
         <p class="lead">{{ project()?.shortDescription }}</p>
         <hr class="my-4 text-" />
@@ -50,6 +50,26 @@
           }
         </ul>
         <div class="text-center mt-4 my-3">
+          <a class="btn GithubBtn" [href]="project()?.githubUrl" target="_blank"
+            >Github Code <i class="fa-brands fa-github"></i
+          ></a>
+          <a class="btn LiveUrlBtn" [href]="project()?.liveUrl" target="_blank"
+            >View Live <i class="fa-solid fa-globe"></i
+          ></a>
+        </div>
+      </div>
+      <div class="projectDetails-info col-lg-6 text-center mx-auto">
+        <h1 class="display-5 fw-bold">{{ project()?.title }}</h1>
+        <p class="lead">{{ project()?.shortDescription }}</p>
+        <hr class="my-4 text-" />
+        <p>{{ project()?.detailedDescription }}</p>
+        <h5 class="mt-4">Technologies Used:</h5>
+        <ul class="list-inline">
+          @for (tech of project()?.technologies; track $index) {
+          <li class="list-inline-item">{{ tech }}</li>
+          }
+        </ul>
+        <div class="mt-4 my-3">
           <a class="btn GithubBtn" [href]="project()?.githubUrl" target="_blank"
             >Github Code <i class="fa-brands fa-github"></i
           ></a>

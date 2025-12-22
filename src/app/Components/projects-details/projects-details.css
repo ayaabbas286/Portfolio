@@ -14,13 +14,13 @@ swiper-container.main-slider {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   background: rgba(0, 0, 0, 0.35);
 }
-.projectDetails-info h1 {
+.projectReview h1 {
   color: var(--mainColor);
-  text-align: center;
+  margin-bottom: 20px;
 }
 
-.projectDetails-info :nth-child(4) {
-  text-align: justify;
+.projectReview :nth-child(4) {
+  margin-bottom: 30px;
 }
 
 /* Make slide fill the container */
@@ -95,7 +95,7 @@ swiper-container.thumbs-slider::part(button-next),
 swiper-container.thumbs-slider::part(button-prev) {
   display: none;
 }
-.projectDetails-info {
+.projectReview {
   color: white;
 }
 .GithubBtn,
@@ -146,4 +146,8 @@ swiper-container.thumbs-slider::part(button-prev) {
     width: 100%;
     height: 80px;
   }
+}
+.proDetails {
+  border: 1px solid gray;
+  padding: 20px;
 }
