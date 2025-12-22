@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
-import { Component, CUSTOM_ELEMENTS_SCHEMA, effect, ElementRef, inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, computed, CUSTOM_ELEMENTS_SCHEMA, effect, ElementRef, inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ProjectsService } from '../../Services/projects-service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { IProjects } from '../../iprojects';
 import { map, switchMap } from 'rxjs';
@@ -10,7 +10,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 @Component({
   selector: 'app-projects-details',
   standalone: true,
-  imports: [HttpClientModule,CommonModule],
+  imports: [HttpClientModule,CommonModule, RouterModule],
    schemas: [CUSTOM_ELEMENTS_SCHEMA],
 providers:[ProjectsService],
   templateUrl: './projects-details.html',
@@ -27,7 +27,10 @@ private route = inject(ActivatedRoute);
   );
 
   project = toSignal<IProjects | null>(this.project$, { initialValue: null });
-
+allProjects = toSignal(this.proService.GetAll().pipe(
+  map(pro => pro as IProjects[])
+), { initialValue: [] });
+relatedProjects = computed(() => this.allProjects().filter(p => p.category === this.project()?.category && p.id !== this.project()?.id).slice(0,4));
 
 @ViewChild('mainSwiper') mainSwiper!: ElementRef<any>;
 @ViewChild('thumbSwiper') thumbSwiper!: ElementRef<any>;

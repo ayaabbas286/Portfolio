@@ -8,6 +8,7 @@ export interface IProjects {
   liveUrl: string;
   githubUrl: string;
   images: string[];
+  category: string;
   detailedDescription: string;
   technologies: string[];
 }
