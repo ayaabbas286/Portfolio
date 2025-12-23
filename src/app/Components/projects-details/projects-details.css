@@ -1,6 +1,7 @@
 /* Container spacing */
 .projectDetailsContainer {
   padding-bottom: 80px;
+  padding-top: 35px;
 }
 .proTitle {
   text-align: center;
