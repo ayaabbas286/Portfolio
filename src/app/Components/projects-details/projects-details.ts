@@ -6,11 +6,12 @@ import { CommonModule } from '@angular/common';
 import { IProjects } from '../../iprojects';
 import { map, switchMap } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { ContactUs } from "../contact-us/contact-us";
 
 @Component({
   selector: 'app-projects-details',
   standalone: true,
-  imports: [HttpClientModule,CommonModule, RouterModule],
+  imports: [HttpClientModule, CommonModule, RouterModule, ContactUs],
    schemas: [CUSTOM_ELEMENTS_SCHEMA],
 providers:[ProjectsService],
   templateUrl: './projects-details.html',
