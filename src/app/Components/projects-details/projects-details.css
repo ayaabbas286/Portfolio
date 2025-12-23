@@ -1,6 +1,5 @@
 /* Container spacing */
 .projectDetailsContainer {
-  padding-top: 20px;
   padding-bottom: 80px;
 }
 
@@ -125,12 +124,14 @@ swiper-container.thumbs-slider::part(button-prev) {
 }
 
 /* Small screens */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   swiper-container.main-slider {
     height: 280px;
     border-radius: 14px;
   }
-
+  .projectDetailsContainer .row > div {
+    width: 90% !important;
+  }
   swiper-container.thumbs-slider {
     height: 90px;
   }
@@ -140,7 +141,7 @@ swiper-container.thumbs-slider::part(button-prev) {
   }
   swiper-container.thumbs-slider::part(button-next),
   swiper-container.thumbs-slider::part(button-prev) {
-    display: block;
+    display: none;
     --swiper-navigation-size: 20px;
     --swiper-navigation-color: #ffffff;
   }
