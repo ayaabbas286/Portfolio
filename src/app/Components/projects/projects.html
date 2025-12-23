@@ -6,41 +6,44 @@
       smooth interactions to bring modern interfaces to life.
     </p>
   </div>
+  <div class="container">
+    <div class="row project-Cards">
+      @for (p of visibleCards(); track p.id) {
+      <div class="col-lg-4 col-md-6 col-sm-12 p-0">
+        <div class="card-container">
+          <div class="card p-0">
+            <div class="front">
+              <div class="card-img-container">
+                <img [src]="p.ProImage" class="card-img-top" alt="Project Image" />
+                <div class="overlayBtn">
+                  <a class="btn mt-auto" [routerLink]="['/projects', p.id]"
+                    ><i class="fa-regular fa-eye"></i
+                  ></a>
+                </div>
+              </div>
 
-  <div class="row project-Cards container">
-    @for (p of visibleCards(); track p.id) {
-    <div class="col-lg-3 col-md-6 col-sm-12 gx-3">
-      <div class="card-container">
-        <div class="card mt-5">
-          <div class="front">
-            <div class="card-img-container">
-              <img [src]="p.ProImage" class="card-img-top" alt="Project Image" />
-            </div>
-
-            <div class="card-body">
-              <h5>{{ p.title }}</h5>
-              <div class="front-cardDetails">
-                <p>{{ p.shortDescription }}</p>
-                <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]">Show Details</a>
+              <div class="card-body">
+                <h5>{{ p.title }}</h5>
+                <div class="front-cardDetails">
+                  <p>{{ p.shortDescription }}</p>
+                  <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]">Show Details</a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="back">
-            <div class="card-body">
-              <h3>{{ p.title }}</h3>
-              <p>{{ p.shortDescription }}</p>
-              <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]"
-                >Show Details <i class="fa-solid fa-angle-right"></i
-              ></a>
-              <!-- <a class="btn LiveUrl" [routerLink]="['/projects', p.id]"
-                >Go Live <i class="fa-solid fa-globe"></i
-              ></a> -->
+            <div class="back">
+              <div class="card-body">
+                <h3>{{ p.title }}</h3>
+                <p>{{ p.shortDescription }}</p>
+                <a class="btn DetailsBtn" [routerLink]="['/projects', p.id]"
+                  >Show Details <i class="fa-solid fa-angle-right"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      }
     </div>
-    }
   </div>
   <div class="d-flex justify-content-center align-items-center">
     <button class="btn LoadMoreBtn" (click)="LoadMore()" *ngIf="hasMore()">

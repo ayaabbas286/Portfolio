@@ -30,7 +30,7 @@ _projects = toSignal(this.projects$, { initialValue: [] as IProjects[] });
 
 SafeProjects = computed(() => this._projects() ?? []);
 
-cardInitialCount = signal(8);
+cardInitialCount = signal(6);
 
 visibleCards = computed(() => {
   const list = this.SafeProjects();
@@ -44,14 +44,14 @@ hasMore = computed(() => this.visibleCards().length > 0 &&
 
 canSeeLess = computed(() =>
   this.visibleCards().length >= this.SafeProjects().length &&
-  this.SafeProjects().length > 8
+  this.SafeProjects().length > 6
 );
 
 LoadMore(){
-  this.cardInitialCount.set(this.cardInitialCount() + 4);
+  this.cardInitialCount.set(this.cardInitialCount() + 3);
 }
 SeeLess(){
-  this.cardInitialCount.set(8);
+  this.cardInitialCount.set(6);
 }
 get debugProjects(): IProjects[] {
   console.log('projects = ', this._projects());

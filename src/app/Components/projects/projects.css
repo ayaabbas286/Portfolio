@@ -17,11 +17,14 @@
 }
 .project-Cards .card {
   position: relative;
-  height: 20rem;
+  height: 22rem;
+  width: 85%;
   border-radius: 20px;
   transform-style: preserve-3d;
   border: transparent;
   transition: all 1s ease-in-out;
+  margin: 0px auto;
+  margin-bottom: 20px;
 }
 .front,
 .card .back {
@@ -73,6 +76,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  z-index: 1;
 }
 
 .front .card-body {
@@ -136,16 +140,40 @@
 .front-cardDetails {
   display: none;
 }
+.overlayBtn {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background-color: #1111118a;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.card-img-container:hover .overlayBtn {
+  opacity: 1;
+}
+.overlayBtn .fa-eye {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  text-shadow: 0px 3px 2px black;
+}
+.overlayBtn .fa-eye:hover {
+  transition: color 0.3s ease-in-out, top 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  color: var(--mainColor);
+  text-shadow: 0px 3px 2px black;
+  top: 48%;
+}
+
 @media screen and (max-width: 767px) {
   .front-cardDetails {
     display: block;
-  }
-  .project-Cards .card {
-    height: 22rem;
-    width: 100%;
-    margin: 20px auto;
-    transform: none;
-    transform-style: flat;
   }
   .card .front .card-img-container {
     height: 250px;
@@ -166,8 +194,25 @@
   .card-container:hover .card {
     transform: none;
   }
+  .overlayBtn {
+    display: block;
+  }
   .DetailsBtn {
-    margin-top: 10px;
+    display: none;
+  }
+  .card-img-container:hover img {
+    transform: scale(1.2) rotate(15deg);
+    transition: transform 0.4s ease-in-out;
+  }
+  .project-Cards .card {
+    height: 18rem;
+    width: 95%;
+    transform: none;
+    transform-style: flat;
+    margin-bottom: 20px !important;
+  }
+  .project-Cards .card .card-body {
+    height: auto;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -198,6 +243,6 @@
     transform: none;
   }
   .DetailsBtn {
-    margin-top: 10px;
+    display: none;
   }
 }
