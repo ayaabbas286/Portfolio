@@ -194,8 +194,15 @@
 }
 .fa-angular {
   color: #e92354;
+  margin-left: 5px;
+  font-size: 30px;
 }
-
+.bi-typescript {
+  font-size: 24px;
+  position: relative;
+  bottom: -11.5px;
+  color: #3178c6;
+}
 @keyframes animated-img {
   0% {
     box-shadow: 0px 0px 5px 0px rgb(103, 24, 53);
