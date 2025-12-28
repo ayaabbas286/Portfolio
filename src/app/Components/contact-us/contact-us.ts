@@ -13,6 +13,7 @@ export class ContactUs {
   form : FormGroup
   isSent = false;
   errorMsg = '';
+  submitted =false
   constructor(private fb : FormBuilder) {
  this.form = this.fb.group({
   email: ['',[Validators.pattern(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/),Validators.required]],
@@ -25,6 +26,7 @@ get email() { return this.form.get('email'); }
 get message() { return this.form.get('message'); }
 
   sendEmail(event :Event) {
+this.submitted = true;
 if (this.form.invalid) return;
     emailjs
       .sendForm(
@@ -38,6 +40,7 @@ if (this.form.invalid) return;
           this.isSent = true;
           this.errorMsg = '';
                this.form.reset();
+               this.submitted = false;
           setTimeout(() => (this.isSent = false), 1000);
         },
         (err) => {
