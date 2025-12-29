@@ -27,7 +27,12 @@
         </div>
         <!-- Message -->
         <div class="field">
-          <textarea formControlName="message" placeholder=" " autocomplete="off"></textarea>
+          <textarea
+            name="message"
+            formControlName="message"
+            placeholder=" "
+            autocomplete="off"
+          ></textarea>
           <label>Your Message</label>
           <p *ngIf="message?.hasError('required') && submitted" class="text-danger">
             message is required !
