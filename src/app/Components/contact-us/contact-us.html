@@ -16,7 +16,13 @@
         </div>
         <!-- Email -->
         <div class="field">
-          <input type="email" formControlName="email" placeholder=" " autocomplete="off" />
+          <input
+            type="email"
+            formControlName="email"
+            placeholder=" "
+            name="email"
+            autocomplete="off"
+          />
           <label>Your Email</label>
           <p *ngIf="email?.hasError('required') && submitted" class="text-danger">
             Email is required !

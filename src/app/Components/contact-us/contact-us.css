@@ -18,8 +18,8 @@ form {
 form::after {
   content: '';
   position: absolute;
-  inset: 5px;
-  border-radius: 8px;
+  inset: 2px;
+  border-radius: 10px;
   background: #12070f;
 }
 form > * {
@@ -29,11 +29,18 @@ form > * {
 form::before {
   content: '';
   position: absolute;
-  inset: 0px;
+  inset: -40%;
   padding: 2px;
-  background: conic-gradient(from 0deg, var(--mainColor), #ffffff, #12070f, var(--mainColor));
-  border-radius: 10px;
-  animation: rotate 5s linear infinite;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    var(--mainColor) 90deg,
+    #ffc8dc 180deg,
+    var(--mainColor) 270deg,
+    transparent 360deg
+  );
+  filter: blur(8px);
+  animation: rotate 6s linear infinite;
 }
 @keyframes rotate {
   0% {
@@ -45,6 +52,7 @@ form::before {
 }
 h1 {
   color: #fff;
+  text-shadow: 3px 5px 4px black;
 }
 .sendBtn {
   position: relative;
