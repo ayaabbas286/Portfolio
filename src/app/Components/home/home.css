@@ -187,7 +187,10 @@
     border: 1px solid rgb(207, 207, 207);
   }
 }
-
+.animate__animated.animate__bounceInRight,
+.animate__animated.animate__bounceInLeft {
+  --animate-duration: 2s;
+}
 /* responsive design  */
 @media screen and (min-width: 322px) and (max-width: 768px) {
   .left-section {

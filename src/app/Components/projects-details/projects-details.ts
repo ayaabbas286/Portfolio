@@ -1,16 +1,18 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component, computed, CUSTOM_ELEMENTS_SCHEMA, effect, ElementRef, inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ProjectsService } from '../../Services/projects-service';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { IProjects } from '../../iprojects';
 import { map, switchMap } from 'rxjs';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { ScrollToForm } from '../../Services/scroll-to-form';
+
 
 @Component({
   selector: 'app-projects-details',
   standalone: true,
-  imports: [HttpClientModule, CommonModule, RouterModule],
+  imports: [HttpClientModule, CommonModule, RouterModule,RouterLink],
    schemas: [CUSTOM_ELEMENTS_SCHEMA],
 providers:[ProjectsService],
   templateUrl: './projects-details.html',
@@ -18,6 +20,8 @@ providers:[ProjectsService],
 
 })
 export class ProjectsDetails {
+
+
 private route = inject(ActivatedRoute);
   private proService = inject(ProjectsService);
 
@@ -38,7 +42,10 @@ relatedProjects = computed(() => this.allProjects().filter(p => p.category === t
 
   private swiperInitialized = false;
 
-constructor() {
+constructor(private scroll : ScrollToForm) {
+
+
+
   effect(() => {
     const p = this.project();
     if (!p) return;
@@ -47,7 +54,7 @@ constructor() {
 
   });
 }
-
+onclickScroll(){this.scroll.scrollToContact()}
 private initOrUpdateSwiper() {
   const mainEl = this.mainSwiper?.nativeElement;
   const thumbEl = this.thumbSwiper?.nativeElement;
@@ -79,6 +86,7 @@ private initOrUpdateSwiper() {
   thumbEl.swiper?.update();
   mainEl.swiper?.update();
 }
+
 
 }
 

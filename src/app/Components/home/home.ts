@@ -5,9 +5,10 @@ import { Services } from '../services/services';
 import { Projects } from "../projects/projects";
 
 
+
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, RouterModule, AboutMe, Services, Projects ],
+  imports: [RouterLink, RouterModule, AboutMe, Services, Projects],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
