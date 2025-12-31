@@ -1,9 +1,10 @@
-import { Component, HostListener, signal } from '@angular/core';
+import { Component, HostListener, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from "./Components/navbar/navbar";
 import { Footer } from './Components/footer/footer';
 import { CommonModule } from '@angular/common';
 import { ContactUs } from './Components/contact-us/contact-us';
+import * as AOS from 'aos';
 
 
 
@@ -13,7 +14,14 @@ import { ContactUs } from './Components/contact-us/contact-us';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements OnInit {
+  ngOnInit(): void {
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+  }
   protected readonly title = signal('Portfolio');
  showTopButton = false;
   showBottomButton = true;          // start visible

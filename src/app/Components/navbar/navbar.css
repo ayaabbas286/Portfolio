@@ -8,6 +8,7 @@
   z-index: 1000;
   left: 50%;
   top: 0;
+
   transform: translate(-50%, 16%);
 }
 
@@ -121,5 +122,9 @@
     border-radius: 32px 32px;
     width: 100%;
     background: linear-gradient(90deg, #12070f 55%, #491024 100%);
+  }
+
+  .container-nav.animate__animated {
+    animation: none;
   }
 }
