@@ -2,7 +2,7 @@
   "projects": [
     {
       "id": 1,
-      "title": "Personal Portfolio",
+      "title": "Learnova",
       "ProImage": "Projects/1.webp",
       "shortDescription": "Single-page portfolio built with Angular to showcase my front-end work.",
       "role": "Front-end Developer",

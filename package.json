@@ -46,6 +46,7 @@
     "@angular/compiler-cli": "^21.0.0",
     "@types/aos": "^3.0.7",
     "angular-cli-ghpages": "^2.0.3",
+    "baseline-browser-mapping": "^2.10.18",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
